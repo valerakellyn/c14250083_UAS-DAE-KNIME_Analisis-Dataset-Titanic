@@ -117,7 +117,7 @@ Bagian ini juga sudah dilengkapi dengan analisis mendalam untuk setiap visualisa
 
 #### Pie Chart: Distribusi Class (Kelas)
 
-![Pie Chart: Distribusi Class (Kelas)](Pie%20Chart_%20Distribusi%20Class%20\(Kelas\).png)
+![Pie Chart: Distribusi Class (Kelas)](Visualisasi_Titanic/Pie%20Chart_%20Distribusi%20Class%20(Kelas).png)
 
 Mayoritas penumpang berada di **Kelas 3**, menunjukkan dominasi kelas ekonomi. Banyaknya penumpang kelas 3 menjelaskan mengapa angka kematian Titanic sangat tinggi, karena kelompok terbesar justru memiliki tingkat keselamatan paling rendah.
 
@@ -125,7 +125,7 @@ Mayoritas penumpang berada di **Kelas 3**, menunjukkan dominasi kelas ekonomi. B
 
 #### Pie Chart: Distribusi Gender
 
-![Pie Chart: Distribusi Gender](Pie%20Chart_%20Distribusi%20Gender.png)
+![Pie Chart: Distribusi Gender](Visualisasi_Titanic/Pie%20Chart_%20Distribusi%20Gender.png)
 
 Jumlah penumpang pria lebih banyak dibandingkan wanita. Ketidakseimbangan ini memberikan gambaran awal tentang mengapa mayoritas korban Titanic adalah pria.
 
@@ -133,7 +133,7 @@ Jumlah penumpang pria lebih banyak dibandingkan wanita. Ketidakseimbangan ini me
 
 #### Pie Chart: Distribusi Penumpang yang Selamat
 
-![Pie Chart: Distribusi Penumpang yang Selamat](Pie%20Chart_%20Distribusi%20Penumpang%20yang%20Selamat.png)
+![Pie Chart: Distribusi Penumpang yang Selamat](Visualisasi_Titanic/Pie%20Chart_%20Distribusi%20Penumpang%20yang%20Selamat.png)
 
 Sebagian besar penumpang tidak selamat. Proporsi kelompok selamat yang kecil menunjukkan betapa kurang efektifnya proses evakuasi Titanic.
 
@@ -143,7 +143,7 @@ Sebagian besar penumpang tidak selamat. Proporsi kelompok selamat yang kecil men
 
 #### Bar Chart: Gender VS Tingkat Keselamatan
 
-![Bar Chart: Gender VS Tingkat Keselamatan](Bar%20Chart_%20Gender%20VS%20Tingkat%20Keselamatan.png)
+![Bar Chart: Gender VS Tingkat Keselamatan](Visualisasi_Titanic/Bar%20Chart_%20Gender%20VS%20Tingkat%20Keselamatan.png)
 
 Wanita memiliki survival rate **~74%**, sedangkan pria hanya **~19%**.
 Ini adalah indikator paling kuat dari semua faktor — kebijakan *women and children first* sangat terlihat jelas di data.
@@ -152,7 +152,7 @@ Ini adalah indikator paling kuat dari semua faktor — kebijakan *women and chil
 
 #### Bar Chart: Class (Kelas) VS Tingkat Keselamatan
 
-![Bar Chart: Class (Kelas) VS Tingkat Keselamatan](Bar%20Chart_%20Class%20\(Kelas\)%20VS%20Tingkat%20Keselamatan.png)
+![Bar Chart: Class (Kelas) VS Tingkat Keselamatan](Visualisasi_Titanic/Bar%20Chart_%20Class%20(Kelas)%20VS%20Tingkat%20Keselamatan.png)
 
 Survival rate menurun seiring turunnya kelas:
 
@@ -166,7 +166,7 @@ Hal ini sesuai dengan letak kabin dan akses fisik ke dek sekoci.
 
 #### Bar Chart: Kelompok Usia VS Tingkat Keselamatan
 
-![Bar Chart: Kelompok Usia VS Tingkat Keselamatan](Bar%20Chart_%20Kelompok%20Usia%20VS%20Tingkat%20Keselamatan.png)
+![Bar Chart: Kelompok Usia VS Tingkat Keselamatan](Visualisasi_Titanic/Bar%20Chart_%20Kelompok%20Usia%20VS%20Tingkat%20Keselamatan.png)
 
 Anak-anak memiliki survival tertinggi (~58%), sedangkan kelompok lansia memiliki survival terendah (~9%).
 Mobilitas dan prioritas penyelamatan menjadi faktor utamanya.
@@ -175,7 +175,7 @@ Mobilitas dan prioritas penyelamatan menjadi faktor utamanya.
 
 #### Heatmap: Gender, Class, dan Survival
 
-![Heatmap: Gender, Class (Kelas), dan Tingkat Keselamatan](Heatmap_%20Gender,%20Class%20\(Kelas\),%20dan%20Tingkat%20Keselamatan.png)
+![Heatmap: Gender, Class (Kelas), dan Tingkat Keselamatan](Visualisasi_Titanic/Heatmap_%20Gender,%20Class%20(Kelas),%20dan%20Tingkat%20Keselamatan.png)
 
 Pola paling menonjol:
 
@@ -187,7 +187,7 @@ Pola paling menonjol:
 
 #### Box Plot: Distribusi Tarif
 
-![Box Plot: Distribusi Tarif VS Class (Kelas)](Box%20Plot_%20Distribusi%20Tarif%20VS%20Class%20\(Kelas\).png)
+![Box Plot: Distribusi Tarif VS Class (Kelas)](Visualisasi_Titanic/Box%20Plot_%20Distribusi%20Tarif%20VS%20Class%20(Kelas).png)
 
 Fare meningkat drastis pada kelas 1, dengan banyak outlier tarif mahal. Hal ini menunjukkan adanya variasi tipe kabin mewah dan menjelaskan gap sosial-ekonomi di kapal.
 
@@ -251,3 +251,5 @@ Pola ini sangat konsisten dengan seluruh hasil EDA dan visualisasi.
   Hanya dengan `Sex` dan `Pclass`, model sudah bisa mencapai akurasi 77%.
 
 ---
+
+
