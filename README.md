@@ -1,4 +1,4 @@
-# 🚢 Laporan Analisis Data Eksplorasi Dataset Titanic
+# Laporan Analisis Data Eksplorasi Dataset Titanic
 
 Laporan ini menyajikan hasil analisis data Titanic, berfokus pada langkah-langkah persiapan data, pemrosesan, visualisasi untuk menemukan insight, pemodelan klasifikasi, serta kesimpulan utama berdasarkan workflow KNIME.
 
