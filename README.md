@@ -1,6 +1,6 @@
 # Laporan Analisis Data Eksplorasi Dataset Titanic
 
-Laporan ini menyajikan hasil analisis data Titanic, berfokus pada langkah-langkah persiapan data, pemrosesan, visualisasi untuk menemukan insight, pemodelan klasifikasi, serta kesimpulan utama berdasarkan workflow KNIME.
+Laporan ini menyajikan hasil analisis data Titanic, terdiri dari penjelasan persiapan data, pemrosesan, visualisasi untuk menemukan insight, pemodelan klasifikasi, serta kesimpulan utama.
 
 ---
 
@@ -10,10 +10,10 @@ Tahap ini memastikan data bersih dan siap untuk analisis lanjutan dan pemodelan 
 
 * **Pemasukan Data:** Dataset Titanic dimuat menggunakan *CSV Reader* untuk membaca data mentah.
 
-* **Penanganan Missing Values:** Node *Missing Value* digunakan untuk mengimputasi nilai kosong pada kolom seperti `Age`, `Embarked`, dan lainnya.
+* **Penanganan Missing Values:** Node *Missing Value* digunakan untuk mengimputasi nilai kosong pada kolom seperti `Age`, `Embarked`, dan lainnya. Nilai akan diisi dengan nilai rata-rata atau frekuensi tertinggi
 
 * **Rekayasa Fitur (Feature Engineering):**
-  Konversi tipe data dilakukan dengan *Number to String* untuk mempermudah visualisasi. Node **Rule Engine** digunakan untuk menghasilkan tiga fitur turunan:
+  Konversi tipe data dilakukan dengan *Number to String* untuk mempermudah visualisasi. Node **Rule Engine** digunakan untuk menghasilkan 3 fitur turunan:
 
   ### Aturan Rule Engine
 
@@ -45,11 +45,11 @@ Tahap ini memastikan data bersih dan siap untuk analisis lanjutan dan pemodelan 
 
   Fitur-fitur ini mempermudah analisis pola dan meningkatkan performa model klasifikasi.
 
-* **Pemilihan Kolom:** Node *Column Filter* digunakan untuk mengambil fitur-fitur yang relevan seperti `Pclass`, `Sex`, `Age`, `Fare`, `Embarked`, dan fitur-fitur hasil Rule Engine.
+* **Pemilihan Kolom:** Node *Column Filter* digunakan untuk mengambil fitur-fitur yang relevan untuk analisis seperti `Pclass`, `Sex`, `Age`, `Fare`, `Embarked`, dan fitur-fitur hasil Rule Engine.
 
 ---
 
-## **Workflow KNIME (Structured with Numbering + Branches)**
+## **Workflow KNIME**
 
 Berikut struktur workflow dalam bentuk penomoran dengan percabangan (hierarchical tree):
 
@@ -89,9 +89,6 @@ Berikut struktur workflow dalam bentuk penomoran dengan percabangan (hierarchica
    |
    └── Workflow End
 ```
-
-Workflow ini menampilkan dua alur besar: **EDA** dan **Modeling**, yang berangkat dari node yang sama yaitu **Number to String**.
-
 ---
 
 ## Pemrosesan Data (Data Processing)
@@ -102,14 +99,13 @@ Tahap ini berfokus pada transformasi data untuk analisis statistik dan persiapan
 
 * **Pembagian Data:** Node *Table Partitioner* memisahkan data menjadi training dan testing sehingga model dapat diuji secara adil.
 
-* **Statistik Deskriptif:** Node *Statistics* memberikan ringkasan statistik numerik seperti mean usia, minimum tarif, dan sebaran umum populasi.
+* **Statistik Deskriptif:** Node *Statistics* memberikan ringkasan statistik numerik seperti mean usia, tarif, dan sebaran umum populasi.
 
 ---
 
 ## Visualisasi dan Interpretasi (Visualization and Interpretation)
 
 Visualisasi membantu memahami pola dalam dataset dan menghubungkannya dengan tingkat kelangsungan hidup penumpang (`Survived`).
-Bagian ini juga sudah dilengkapi dengan analisis mendalam untuk setiap visualisasi.
 
 ---
 
@@ -146,7 +142,7 @@ Jumlah penumpang pria lebih banyak dibandingkan wanita. Ketidakseimbangan ini me
 ![Bar Chart: Gender VS Tingkat Keselamatan](Visualisasi_Titanic/Bar%20Chart_%20Gender%20VS%20Tingkat%20Keselamatan.png)
 
 Wanita memiliki survival rate **~74%**, sedangkan pria hanya **~19%**.
-Ini adalah indikator paling kuat dari semua faktor — Gender adalah prediktor kelangsungan hidup yang paling kuat. Temuan ini sangat mendukung kebijakan "wanita dan anak-anak dahulu" (women and children first).
+Ini adalah indikator paling kuat dari semua faktor, Gender adalah prediktor kelangsungan hidup yang paling kuat. Temuan ini sangat mendukung kebijakan "wanita dan anak-anak dahulu" (women and children first).
 
 ---
 
@@ -154,7 +150,7 @@ Ini adalah indikator paling kuat dari semua faktor — Gender adalah prediktor k
 
 ![Box Plot: Distribusi Tarif VS Class (Kelas)](Visualisasi_Titanic/Box%20Plot_%20Distribusi%20Tarif%20VS%20Class%20(Kelas).png)
 
-Tarif (Fare) berkorelasi langsung dengan Kelas penumpang, di mana Kelas 1 memiliki median tarif tertinggi dan variabilitas harga yang paling besar. Sebaliknya, Kelas 3 memiliki tarif termurah dan tersempit, mengindikasikan tarif yang seragam dan terjangkau. Keberadaan outlier tarif yang sangat tinggi di Kelas 1 mengindikasikan adanya beberapa penumpang elit yang membayar harga premium yang signifikan.
+Tarif (Fare) berkorelasi langsung dengan Kelas penumpang, di mana Kelas 1 memiliki median tarif tertinggi dan variabilitas harga yang paling besar. Sebaliknya, Kelas 3 memiliki tarif termurah dan tersempit, mengindikasikan tarif yang seragam dan terjangkau.
 
 ---
 
@@ -191,13 +187,13 @@ Pola paling menonjol:
 * Pria kelas 3 → peluang selamat paling rendah.
 * Gender + Kelas = kombinasi paling menentukan survival.
 
-Heatmap ini menunjukkan bahwa Gender adalah faktor dominan dalam tingkat keselamatan; penumpang wanita di semua kelas memiliki probabilitas selamat yang sangat tinggi (diwakili warna merah tua), sedangkan penumpang pria di semua kelas memiliki peluang selamat yang sangat rendah (diwakili warna kuning pucat). Prioritas penyelamatan diberikan secara ketat berdasarkan Gender, dengan Wanita Kelas 1 dan 2 memiliki peluang terbaik untuk selamat di seluruh kapal.
+Heatmap ini menunjukkan bahwa Gender adalah faktor dominan dalam tingkat keselamatan, penumpang wanita di semua kelas memiliki probabilitas selamat yang sangat tinggi (diwakili warna merah tua), sedangkan penumpang pria di semua kelas memiliki peluang selamat yang sangat rendah (diwakili warna kuning pucat). Prioritas penyelamatan diberikan secara ketat berdasarkan Gender, dengan Wanita Kelas 1 dan 2 memiliki peluang terbaik untuk selamat di seluruh kapal.
 
 ---
 
 ## Klasifikasi Data: Decision Tree
 
-Tahap ini bertujuan memprediksi `Survived` menggunakan model *Decision Tree*. Penjelasan ini telah diperluas secara detail.
+Tahap ini bertujuan memprediksi `Survived` menggunakan model *Decision Tree*.
 
 ---
 
@@ -213,7 +209,7 @@ Tahap ini bertujuan memprediksi `Survived` menggunakan model *Decision Tree*. Pe
   * `SibSp`
   * `Parch`
   * `Embarked_num`
-* Pohon mencari informasi paling kuat untuk membuat keputusan, menggunakan indeks Gini atau Entropy.
+* Pohon mencari informasi paling kuat untuk membuat keputusan, menggunakan indeks Gini.
 * **Decision Tree Predictor** digunakan untuk menghasilkan prediksi.
 * **Scorer** menghitung akurasi model.
 
