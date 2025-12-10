@@ -11,7 +11,7 @@ Tahap ini memastikan data bersih dan siap untuk analisis lanjutan dan pemodelan 
 * **Pemasukan Data:** Dataset Titanic dimuat menggunakan *CSV Reader* untuk membaca data mentah.
 
 * **Penanganan Missing Values:** Node *Missing Value* digunakan untuk mengimputasi nilai kosong pada kolom seperti `Age`, `Embarked`, dan lainnya. Nilai akan diisi dengan nilai rata-rata atau frekuensi tertinggi
-  ![Pengaturan Missing Values](Visualisasi_Titanic/Setting%20Missing%20Values.png)
+  ![Pengaturan Missing Values](Visualisasi_Titanic/Setting%20Missing%20Value.png)
 
 * **Rekayasa Fitur (Feature Engineering):**
   Konversi tipe data dilakukan dengan *Number to String* untuk mempermudah visualisasi. Node **Rule Engine** digunakan untuk menghasilkan 3 fitur turunan:
