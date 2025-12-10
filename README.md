@@ -97,7 +97,7 @@ Tahap ini berfokus pada transformasi data untuk analisis statistik dan persiapan
 
 * **Agregasi:** Node *GroupBy* digunakan untuk menghitung rata-rata persentase selamat berdasarkan kategori seperti kelas, gender, dan kelompok usia.
 ![Pengaturan Node GroupBy Group Column](Visualisasi_Titanic/Setting%20GroupBy%20Node.png)
-![Pengaturan Node GroupBy Agregrasi Mean Survived](Visualisasi_Titanic/Setting%20GroupBy%20Node_1%20.png)
+![Pengaturan Node GroupBy Agregrasi Mean Survived](Visualisasi_Titanic/Setting%20GroupBy%20Node_1.png)
 
 * **Pembagian Data:** Node *Table Partitioner* memisahkan data menjadi training dan testing sehingga model dapat diuji secara adil.
 
